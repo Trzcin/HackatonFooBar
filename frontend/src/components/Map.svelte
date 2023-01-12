@@ -28,12 +28,14 @@
       const result: Result = e.result;
       lon = result.center[0];
       lat = result.center[1];
+      mapExpanded = false;
     })
   });
 
+  export let mapExpanded: boolean;
 </script>
 
-<div id="map"></div>
+<div id="map" class:not-expanded={!mapExpanded}></div>
 {#if lat && lon}
   <h1>{lon} {lat}</h1>
 {/if}
@@ -41,13 +43,17 @@
 <style>
   #map {
     display: block;
-    height: calc(100vh - 20rem);
+    height: calc(100vh - 4rem);
     width: 100%;
-    z-index: -1;
+  }
+
+  .not-expanded {
+    height: calc(100vh - 20rem) !important;
   }
 
   h1 {
     position: absolute;
+    top: 5rem;
     z-index: 0;
   }
 </style>

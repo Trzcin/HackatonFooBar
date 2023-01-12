@@ -4,6 +4,12 @@
   import CategoryGrid from "./components/CategoryGrid.svelte";
   import type Category from "./types/category";
   import CategoryFilterInput from "./components/CategoryFilterInput.svelte";
+  import GroupPicker from "./components/GroupPicker.svelte";
+  import Rating from "./components/Rating.svelte";
+  import GroupRating from "./components/GroupRating.svelte";
+  import { groups } from "./groups";
+  import type { Group } from "./groups";
+  import {onMount} from "svelte";
 
   const data: Category[] = [
     {
@@ -37,11 +43,36 @@
       time: "7 minut"
     },
   ];
-  let displayData: Category[] = [...data];
+  let groupData: Category[] = [...data];
+  let displayData: Category[] = [...groupData];
+
+  let displayGroups: Group[] = [...groups];
+
+  $: {
+    groupData = data.filter(c => {
+      let found = false;
+      for (const group of displayGroups) {
+        found = group.categories.includes(c.name);
+        if (found) break;
+      }
+      return found;
+    });
+  }
+
+  let mapExpanded = true;
+
+  onMount(() => {
+    window.scrollTo(0, 0);
+  });
 </script>
 
 <Navbar />
-<Map />
-<CategoryFilterInput {data} bind:displayData={displayData} />
-<CategoryGrid data={displayData} />
+<Map bind:mapExpanded={mapExpanded}/>
+{#if !mapExpanded}
+  <Rating />
+  <GroupPicker groups={groups.filter(g => !g.primary)} bind:displayGroups={displayGroups}/>
+  <GroupRating groups={displayGroups}/>
+  <CategoryFilterInput {data} bind:displayData={displayData} {groupData}/>
+  <CategoryGrid data={displayData} />
+{/if}
 

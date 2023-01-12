@@ -1,7 +1,7 @@
 <nav>
   <div id="logo">
     <img src="/vite.svg" alt="logo">
-    <p>15 Minute City</p>
+    <p>15 Minutowe Miasto</p>
   </div>
 </nav>
 
@@ -14,6 +14,7 @@
     justify-content: space-between;
     padding: 1.5rem;
     box-shadow: 0 5px 5px #33333322;
+    z-index: 2;
   }
 
   #logo {
@@ -25,5 +26,9 @@
   img {
     width: 2.5rem;
     height: auto;
+  }
+
+  p {
+    font-weight: 600;
   }
 </style>

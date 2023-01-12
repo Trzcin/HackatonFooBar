@@ -14,3 +14,23 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+.blue {
+  background-color: #007bff;
+}
+
+.teal {
+  background-color: #17a2b8;
+}
+
+.green {
+  background-color: #28a745;
+}
+
+.yellow {
+  background-color: #ffc107;
+}
+
+.red {
+  background-color: #dc3545;
+}
