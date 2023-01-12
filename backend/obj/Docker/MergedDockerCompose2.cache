@@ -1,0 +1,38 @@
+services:
+  restapi:
+    build:
+      context: D:\Programy\besthackathon\HackatonFooBar\backend
+      dockerfile: RestApi/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: RestApi
+      target: base
+    container_name: RestApi_1
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: restapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net6.0/RestApi.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - D:\Programy\besthackathon\HackatonFooBar\backend\RestApi:/app:rw
+    - C:\Users\mefiu\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\mefiu\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\mefiu\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\mefiu\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Programy\besthackathon\HackatonFooBar\backend:/src:rw
+version: '3.4'

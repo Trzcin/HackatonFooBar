@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApi", "RestApi\RestApi.csproj", "{45C86878-EDAF-436D-B9B5-BF86A94ECF66}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E789AFF7-506E-489D-9164-425DD6138788}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45C86878-EDAF-436D-B9B5-BF86A94ECF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C86878-EDAF-436D-B9B5-BF86A94ECF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C86878-EDAF-436D-B9B5-BF86A94ECF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C86878-EDAF-436D-B9B5-BF86A94ECF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E789AFF7-506E-489D-9164-425DD6138788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E789AFF7-506E-489D-9164-425DD6138788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E789AFF7-506E-489D-9164-425DD6138788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E789AFF7-506E-489D-9164-425DD6138788}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9A6D5A4-3647-47F3-AE18-657E033AB92A}
+	EndGlobalSection
+EndGlobal
