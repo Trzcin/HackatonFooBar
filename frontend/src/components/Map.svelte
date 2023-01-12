@@ -6,7 +6,6 @@
   
   let lon: number;
   let lat: number;
-  let data;
 
   onMount(() => { 
     mapboxgl.accessToken = "pk.eyJ1IjoidHJ6Y2luMSIsImEiOiJjbGN0M2pneTkwOWxhM3BxdDZsOWpkdGZ6In0.5Ot2WYhpkxNyNZA8b28xgw";
@@ -41,10 +40,10 @@
 
 <style>
   #map {
-    position: absolute;
-    top: 4rem;
-    height: calc(100vh - 4rem);
+    display: block;
+    height: calc(100vh - 20rem);
     width: 100%;
+    z-index: -1;
   }
 
   h1 {
