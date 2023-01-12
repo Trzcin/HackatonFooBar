@@ -1,0 +1,14 @@
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\RestApi.deps.json
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\RestApi.runtimeconfig.json
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\appsettings.Development.json
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\appsettings.json
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\RestApi.exe
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\RestApi.dll
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\Microsoft.OpenApi.dll
+D:\Programy\besthackathon\HackatonFooBar\backend\bin\Debug\RestApi.pdb
+D:\Programy\besthackathon\HackatonFooBar\backend\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+D:\Programy\besthackathon\HackatonFooBar\backend\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\Programy\besthackathon\HackatonFooBar\backend\obj\Debug\docker-compose.dcproj.CopyComplete
