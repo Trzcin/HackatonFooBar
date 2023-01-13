@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: RestApi/Dockerfile
+    command: ["dotnet", "ef", "database update"]
     depends_on: 
       - mssql
     networks:
