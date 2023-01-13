@@ -15,14 +15,6 @@
 
 <div class="card {color}">
   <h3>{titleCase(category.name)}</h3>
-  {#if category.link}
-    <a href="{category.link}">
-      <p>Apteka Novum</p>
-      <img src="eye.svg" alt="zobacz" id="eye">
-    </a> 
-  {:else}
-    <p>Apteka Novum</p>
-  {/if}
   <div class="times">
     <div>
       <img src="/walk.svg" alt="pieszo" class="transport">
