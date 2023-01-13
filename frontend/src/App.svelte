@@ -14,33 +14,33 @@
 
   const data: Category[] = [
     {
-      name: "Apteka",
+      name: "apteka",
       nearest: {lon: 50, lat: 50},
       time: "7 minut",
       link: "google.com"
     },
     {
-      name: "Sklep Spożywczy",
+      name: "sklep spożywczy",
       nearest: {lon: 50, lat: 50},
       time: "7 minut"
     },
     {
-      name: "Przedszkole",
+      name: "przedszkole",
       nearest: {lon: 50, lat: 50},
       time: "7 minut"
     },
     {
-      name: "Szkoła Podstawowa",
+      name: "szkoła podstawowa",
       nearest: {lon: 50, lat: 50},
       time: "7 minut"
     },
     {
-      name: "Przychodnia",
+      name: "przychodnia",
       nearest: {lon: 50, lat: 50},
       time: "7 minut"
     },
     {
-      name: "Restauracja",
+      name: "restauracja",
       nearest: {lon: 50, lat: 50},
       time: "7 minut"
     },

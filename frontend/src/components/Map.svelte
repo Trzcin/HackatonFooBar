@@ -29,7 +29,12 @@
       lon = result.center[0];
       lat = result.center[1];
       mapExpanded = false;
-    })
+    });
+
+    new mapboxgl.Marker({
+      color: '#28a745'
+    }).setLngLat([18.607299, 54.377545])
+      .addTo(map);
   });
 
   export let mapExpanded: boolean;

@@ -3,10 +3,18 @@
 
   export let category: Category = undefined;
   export let color: string;
+
+  function titleCase(str: string) {
+    const split = str.toLowerCase().split(' ');
+    for (let i = 0; i < split.length; i++) {
+      split[i] = split[i].charAt(0).toUpperCase() + split[i].substring(1);
+    }
+    return split.join(' ');
+  }
 </script>
 
 <div class="card {color}">
-  <h3>{category.name}</h3>
+  <h3>{titleCase(category.name)}</h3>
   {#if category.link}
     <a href="{category.link}">
       <p>Apteka Novum</p>
@@ -17,16 +25,16 @@
   {/if}
   <div class="times">
     <div>
-      <img src="" alt="">
+      <img src="/walk.svg" alt="pieszo" class="transport">
       <p>14 min</p>
     </div>
     <div>
-      <p>rowerem</p>
-      <p>14 min</p>
+      <img src="/bike.svg" alt="rowerem" class="transport">
+      <p>8 min</p>
     </div>
     <div>
-      <p>tramwajem</p>
-      <p>14 min</p>
+      <img src="/bus.svg" alt="transport publiczny" class="transport">
+      <p>5 min</p>
     </div>
   </div>
 </div>
@@ -65,5 +73,14 @@
     display: flex;
     gap: .5rem;
     align-items: center;
+  }
+
+  .transport {
+    width: 2rem;
+    height: auto;
+  }
+
+  .times > div > p {
+    margin-top: .5px;
   }
 </style>

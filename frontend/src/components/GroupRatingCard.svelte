@@ -6,7 +6,7 @@
 </script>
 
 <div id="card" class="{color}">
-  <h2>{group.name}</h2>
+  <h3>{group.name}</h3>
   <p>54%</p>
 </div>
 

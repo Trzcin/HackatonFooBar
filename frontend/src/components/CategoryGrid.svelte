@@ -24,7 +24,7 @@
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
     width: fit-content;
   }
 </style>
