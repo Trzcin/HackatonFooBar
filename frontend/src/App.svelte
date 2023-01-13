@@ -10,12 +10,14 @@
   import { groups } from "./groups";
   import type { Group } from "./groups";
   import {onMount} from "svelte";
+  import PrimaryRating from "./components/PrimaryRating.svelte";
 
   const data: Category[] = [
     {
       name: "Apteka",
       nearest: {lon: 50, lat: 50},
-      time: "7 minut"
+      time: "7 minut",
+      link: "google.com"
     },
     {
       name: "Sklep Spożywczy",
@@ -70,6 +72,7 @@
 <Map bind:mapExpanded={mapExpanded}/>
 {#if !mapExpanded}
   <Rating />
+  <PrimaryRating groups={groups.filter(g => g.primary)}/>
   <GroupPicker groups={groups.filter(g => !g.primary)} bind:displayGroups={displayGroups}/>
   <GroupRating groups={displayGroups}/>
   <CategoryFilterInput {data} bind:displayData={displayData} {groupData}/>

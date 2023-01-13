@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { Group } from "../groups";
+
+import type { Group } from "../groups";
   import GroupRatingCard from "./GroupRatingCard.svelte";
 
   export let groups: Group[];
@@ -18,6 +19,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 1.5rem 2rem;
-    gap: 4rem;
+    gap: 2rem;
   }
 </style>

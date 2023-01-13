@@ -7,10 +7,17 @@
 
 <div class="card {color}">
   <h3>{category.name}</h3>
-  <p>Apteka Novum</p>
+  {#if category.link}
+    <a href="{category.link}">
+      <p>Apteka Novum</p>
+      <img src="eye.svg" alt="zobacz" id="eye">
+    </a> 
+  {:else}
+    <p>Apteka Novum</p>
+  {/if}
   <div class="times">
     <div>
-      <p>pieszo</p>
+      <img src="" alt="">
       <p>14 min</p>
     </div>
     <div>
@@ -45,5 +52,18 @@
 
   .card > p {
     margin-top: .5rem;
+  }
+
+  #eye {
+    width: 1.5rem;
+    height: auto;
+  }
+
+  a {
+    color: white;
+    margin-top: .5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
   }
 </style>

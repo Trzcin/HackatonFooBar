@@ -9,6 +9,7 @@ export const groups: Group[] = [
   {
     name: "Zdrowie i Usługi",
     primary: true,
+    icon: "health_and_services.svg",
     categories: [
       "apteka",
       "dentysta",
@@ -49,6 +50,7 @@ export const groups: Group[] = [
   {
     name: "Miejsce do Pójścia",
     primary: true,
+    icon: "places.svg",
     categories: [
       "atrakcje",
       "kultura",
@@ -69,11 +71,13 @@ export const groups: Group[] = [
   {
     name: "Komunikacja",
     primary: true,
+    icon: "transport.svg",
     categories: ["przystanek autobusowy", "stacja SKM", "przystanek tramwaju"],
   },
   {
     name: "Przyroda",
     primary: true,
+    icon: "nature.svg",
     categories: ["plaża", "zbiornik wodny", "las", "park"],
   },
   {

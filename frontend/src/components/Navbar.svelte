@@ -1,6 +1,6 @@
 <nav>
   <div id="logo">
-    <img src="/vite.svg" alt="logo">
+    <img src="/clock.svg" alt="logo">
     <p>15 Minutowe Miasto</p>
   </div>
 </nav>
@@ -24,7 +24,7 @@
   }
 
   img {
-    width: 2.5rem;
+    width: 2rem;
     height: auto;
   }
 

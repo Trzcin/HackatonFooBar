@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type Group from "../types/group";
+  import type {Group} from "../groups";
 
   export let group: Group;
   export let color: string;
@@ -7,7 +7,7 @@
 
 <div id="card" class="{color}">
   <h2>{group.name}</h2>
-  <p>5.4/10</p>
+  <p>54%</p>
 </div>
 
 <style>
