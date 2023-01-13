@@ -22,9 +22,8 @@
 
   #grid {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    width: fit-content;
   }
 </style>

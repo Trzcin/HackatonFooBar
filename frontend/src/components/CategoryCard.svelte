@@ -41,7 +41,9 @@
 
 <style>
   .card {
-    width: 100%;
+    flex: 1;
+    max-width: 20rem;
+    min-width: 20rem;
     border-radius: 5px;
     color: white;
     padding: 1rem 2rem;

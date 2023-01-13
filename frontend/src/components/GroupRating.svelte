@@ -16,8 +16,8 @@ import type { Group } from "../groups";
 
 <style>
   div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     margin: 1.5rem 2rem;
     gap: 2rem;
   }

@@ -12,7 +12,9 @@
 
 <style>
   #card {
-    width: 100%;
+    flex: 1;
+    max-width: 15rem;
+    min-width: 15rem;
     border-radius: 5px;
     color: white;
     padding: 1rem 2rem;

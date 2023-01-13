@@ -48,7 +48,7 @@ export const groups: Group[] = [
     ],
   },
   {
-    name: "Miejsce do Pójścia",
+    name: "Kultura i Rekreacja",
     primary: true,
     icon: "places.svg",
     categories: [
