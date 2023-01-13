@@ -16,5 +16,5 @@ npm run dev
 
 ```
 cd backend
-docker nie działa... jeszcze 
+docker-compose up
 ```
