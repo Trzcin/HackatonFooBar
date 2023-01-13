@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EFDataAccessLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,13 @@ namespace DataInitializer
     {
         static public string basePath = "/initdata/";
         static public string extension = "_v1.csv";
+        static public MapEdges mapEdges = new MapEdges()
+        {
+            MinLon = 18.445,
+            MaxLon = 18.723,
+            MinLat = 54.304,
+            MaxLat = 54.417
+        };
 
         static public Dictionary<string, List<string>> CategoryToPaths = new()
         {
