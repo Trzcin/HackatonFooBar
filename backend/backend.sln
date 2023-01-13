@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApi", "RestApi\RestApi.
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E789AFF7-506E-489D-9164-425DD6138788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDataAccessLibrary", "EFDataAccessLibrary\EFDataAccessLibrary.csproj", "{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFDataAccessLibrary", "EFDataAccessLibrary\EFDataAccessLibrary.csproj", "{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataInitializer", "DataInitializer\DataInitializer.csproj", "{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
