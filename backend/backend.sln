@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApi", "RestApi\RestApi.csproj", "{45C86878-EDAF-436D-B9B5-BF86A94ECF66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApi", "RestApi\RestApi.csproj", "{45C86878-EDAF-436D-B9B5-BF86A94ECF66}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E789AFF7-506E-489D-9164-425DD6138788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDataAccessLibrary", "EFDataAccessLibrary\EFDataAccessLibrary.csproj", "{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E789AFF7-506E-489D-9164-425DD6138788}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E789AFF7-506E-489D-9164-425DD6138788}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E789AFF7-506E-489D-9164-425DD6138788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A3F54F-60C0-49E5-8FF4-7565E1F461AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

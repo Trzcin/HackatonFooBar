@@ -6,3 +6,21 @@ services:
     build:
       context: .
       dockerfile: RestApi/Dockerfile
+    depends_on: 
+      - mssql
+    networks:
+      - backend
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=LubiePlacki1234
+      - MSSQL_PID=Express
+    networks:
+      - backend
+
+networks:
+  backend:
