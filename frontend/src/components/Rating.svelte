@@ -1,6 +1,6 @@
 <div>
   <img src="/star.svg" alt="ocena">
-  <h1>Przyjazność lokalizacji: 88%</h1>
+  <h1>Przyjazność lokalizacji: {Math.floor(Math.random()*100)}%</h1>
 </div>
 
 <style>

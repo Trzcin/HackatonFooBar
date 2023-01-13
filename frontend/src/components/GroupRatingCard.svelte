@@ -7,7 +7,7 @@
 
 <div id="card" class="{color}">
   <h3>{group.name}</h3>
-  <p>54%</p>
+  <p>{Math.floor(Math.random()*100)}%</p>
 </div>
 
 <style>
