@@ -12,5 +12,9 @@ namespace EFDataAccessLibrary.DataAccess
     {
         public PlaceContext(DbContextOptions options) : base(options) { }
         public DbSet<Place> Places { get; set; }
+        public DbSet<MapEdges> MapEdges { get; set; }
+        public DbSet<Address> Address { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Times> Times { get; set; }
     }
 }
