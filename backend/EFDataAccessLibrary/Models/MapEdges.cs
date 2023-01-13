@@ -7,25 +7,21 @@ using System.Threading.Tasks;
 
 namespace EFDataAccessLibrary.Models
 {
-    public class Place
+    public class MapEdges
     {
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(200)]
-        public string Title { get; set; }
+        public double MinLat { get; set; }
 
         [Required]
-        public double Lat { get; set; }
+        public double MaxLat { get; set; }
 
         [Required]
-        public double Lon { get; set; }
+        public double MinLon { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        public string Category { get; set; }
+        public double MaxLon { get; set; }
 
-        [MaxLength(1000)]
-        public string? Link { get; set; }
     }
 }

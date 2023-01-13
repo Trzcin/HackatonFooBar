@@ -4,6 +4,7 @@ using EFDataAccessLibrary.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDataAccessLibrary.Migrations
 {
     [DbContext(typeof(PlaceContext))]
-    partial class PlaceContextModelSnapshot : ModelSnapshot
+    [Migration("20230113044314_AddAddresses")]
+    partial class AddAddresses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,42 +42,6 @@ namespace EFDataAccessLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Address");
-                });
-
-            modelBuilder.Entity("EFDataAccessLibrary.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("AddressId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("Distance")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("NearestId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TimesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AddressId");
-
-                    b.HasIndex("NearestId");
-
-                    b.HasIndex("TimesId");
-
-                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("EFDataAccessLibrary.Models.MapEdges", b =>
@@ -110,6 +77,9 @@ namespace EFDataAccessLibrary.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("AddressId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -132,57 +102,21 @@ namespace EFDataAccessLibrary.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AddressId");
+
                     b.ToTable("Places");
                 });
 
-            modelBuilder.Entity("EFDataAccessLibrary.Models.Times", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Cycling")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PublicTransport")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Walking")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Times");
-                });
-
-            modelBuilder.Entity("EFDataAccessLibrary.Models.Category", b =>
+            modelBuilder.Entity("EFDataAccessLibrary.Models.Place", b =>
                 {
                     b.HasOne("EFDataAccessLibrary.Models.Address", null)
-                        .WithMany("Categories")
+                        .WithMany("Places")
                         .HasForeignKey("AddressId");
-
-                    b.HasOne("EFDataAccessLibrary.Models.Place", "Nearest")
-                        .WithMany()
-                        .HasForeignKey("NearestId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EFDataAccessLibrary.Models.Times", "Times")
-                        .WithMany()
-                        .HasForeignKey("TimesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Nearest");
-
-                    b.Navigation("Times");
                 });
 
             modelBuilder.Entity("EFDataAccessLibrary.Models.Address", b =>
                 {
-                    b.Navigation("Categories");
+                    b.Navigation("Places");
                 });
 #pragma warning restore 612, 618
         }
