@@ -46,8 +46,11 @@ using (var scope = app.Services.CreateScope())
         var places = DataProvider.InitData();
         context.AddRange(places);
         context.SaveChanges();
-    }
 
+        var MapEdges = places.GetMapEdges();
+        context.AddRange(MapEdges);
+        context.SaveChanges();
+    }
 }
 
 app.Run();
