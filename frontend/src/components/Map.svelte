@@ -35,9 +35,6 @@
 </script>
 
 <div id="map" class:not-expanded={!mapExpanded}></div>
-{#if lat && lon}
-  <h1>{lon} {lat}</h1>
-{/if}
 
 <style>
   #map {
@@ -48,11 +45,5 @@
 
   .not-expanded {
     height: calc(100vh - 20rem) !important;
-  }
-
-  h1 {
-    position: absolute;
-    top: 5rem;
-    z-index: 0;
   }
 </style>
