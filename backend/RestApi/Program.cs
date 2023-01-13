@@ -1,5 +1,7 @@
 using DataInitializer;
 using EFDataAccessLibrary.DataAccess;
+using EFDataAccessLibrary.Models;
+using MapCalculation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -47,8 +49,47 @@ using (var scope = app.Services.CreateScope())
         context.AddRange(places);
         context.SaveChanges();
 
-        var MapEdges = places.GetMapEdges();
-        context.AddRange(MapEdges);
+        for (double lat = Utils.mapEdges.MinLat; lat < Utils.mapEdges.MaxLat; lat += Utils.precision)
+        {
+            for (double lon = Utils.mapEdges.MinLon; lon < Utils.mapEdges.MaxLon; lon += Utils.precision)
+            {
+                Dictionary<string, Category> categories = new Dictionary<string, Category>();
+                foreach (var key in Utils.CategoryToPaths.Keys)
+                {
+                    categories.Add(key, new Category
+                    {
+                        Name = key,
+                        Distance = 999,
+                    });
+                }
+
+                places.ForEach(place =>
+                {
+                    double distance = place.GetDistance(lat, lon);
+
+                    if (distance < categories[place.Category].Distance)
+                    {
+                        categories[place.Category].Distance = distance;
+                        categories[place.Category].Nearest = place;
+                    }
+                });
+
+                foreach (KeyValuePair<string, Category> entry in categories)
+                {
+                    entry.Value.Times = entry.Value.Distance.ToTime();
+                }
+
+                Address address = new Address
+                {
+                    Lat = lat,
+                    Lon = lon,
+                    Categories = categories.Values.ToList()
+                };
+
+                context.Address.Add(address);
+            }
+        }
+
         context.SaveChanges();
     }
 }

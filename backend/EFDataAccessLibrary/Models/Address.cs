@@ -17,6 +17,6 @@ namespace EFDataAccessLibrary.Models
         [Required]
         public double Lon { get; set; }
 
-        public List<Place> Places { get; set; } = new();
+        public List<Category> Categories { get; set; } = new();
     }
 }

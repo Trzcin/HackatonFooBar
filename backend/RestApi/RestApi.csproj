@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DataInitializer\DataInitializer.csproj" />
     <ProjectReference Include="..\EFDataAccessLibrary\EFDataAccessLibrary.csproj" />
+    <ProjectReference Include="..\MapCalculation\MapCalculation.csproj" />
   </ItemGroup>
 
 </Project>

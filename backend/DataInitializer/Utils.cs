@@ -11,6 +11,7 @@ namespace DataInitializer
     {
         static public string basePath = "/initdata/";
         static public string extension = "_v1.csv";
+        static public double precision = 0.021;
         static public MapEdges mapEdges = new MapEdges()
         {
             MinLon = 18.445,
