@@ -10,6 +10,8 @@ services:
       - mssql
     networks:
       - backend
+    volumes:
+      - ../csv_data/:/initdata
 
   mssql:
     image: mcr.microsoft.com/mssql/server:2019-latest

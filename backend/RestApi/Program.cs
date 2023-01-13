@@ -1,3 +1,4 @@
+using DataInitializer;
 using EFDataAccessLibrary.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,6 +40,14 @@ using (var scope = app.Services.CreateScope())
     {
         context.Database.Migrate();
     }
+
+    if (context.Places.Count() == 0)
+    {
+        var places = DataProvider.InitData();
+        context.AddRange(places);
+        context.SaveChanges();
+    }
+
 }
 
 app.Run();
