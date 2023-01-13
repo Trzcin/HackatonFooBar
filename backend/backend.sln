@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFDataAccessLibrary", "EFDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataInitializer", "DataInitializer\DataInitializer.csproj", "{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapCalculation", "MapCalculation\MapCalculation.csproj", "{64DEC537-DD98-4E2E-A21F-B56E9C15A08F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{271B1F0E-D616-4B8A-B9F3-E7192F97A83F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DEC537-DD98-4E2E-A21F-B56E9C15A08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DEC537-DD98-4E2E-A21F-B56E9C15A08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DEC537-DD98-4E2E-A21F-B56E9C15A08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DEC537-DD98-4E2E-A21F-B56E9C15A08F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
