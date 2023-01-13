@@ -1,4 +1,4 @@
-lat,lon,title,type,link
+lat,lon,title,type,link 
 54.51,18.53,Węzeł Franciszki Cegielskiej,Autobus,
 54.37,18.36,Małkowo,Autobus,
 54.38,18.36,Miszewo Pępowo (N/Ż),Autobus,
@@ -6,7 +6,7 @@ lat,lon,title,type,link
 54.46,18.45,Kacze Buki,Autobus,
 54.39,18.38,Banino Pszenna,Autobus,
 54.47,18.47,Kameliowa,Autobus,
-54.52,18.54,3 Maja - Hala,Autobus,
+54.52,18.54,3 Maja - Hala,Autobus,  
 54.47,18.47,Dąbrowa Centrum,Autobus,
 54.47,18.47,Paprykowa,Autobus,
 54.47,18.46,Szafranowa,Autobus,
