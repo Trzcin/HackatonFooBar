@@ -8,7 +8,7 @@
   let lat: number;
 
   onMount(() => { 
-    mapboxgl.accessToken = "pk.eyJ1IjoidHJ6Y2luMSIsImEiOiJjbGN0M2pneTkwOWxhM3BxdDZsOWpkdGZ6In0.5Ot2WYhpkxNyNZA8b28xgw";
+    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX;
 
     const map = new mapboxgl.Map({
       container: 'map',

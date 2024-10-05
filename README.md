@@ -10,15 +10,21 @@ Aplikacja internetowa pomagającą określenie atrakcyjności miejsca zamieszkan
 
 ### Frontend
 
+Do uruchomienia wymagany jest token Mapbox. Należy go przypisać do zmiennej środowiskowej `VITE_MAPBOX`.
+W tym celu można utworzyć plik `frontend/.env` z zawartością:
 ```
+VITE_MAPBOX=<token>
+```
+
+```bash
 cd frontend
-npm install
+npm i
 npm run dev
 ```
 
 ### Backend
 
-```
+```bash
 cd backend
 docker-compose up
 ```
